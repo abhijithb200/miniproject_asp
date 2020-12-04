@@ -1,6 +1,6 @@
 *{
     padding:0;
-    margin: 0 0 0 0px;
+    margin: 0px 0 0 0px;
 }
 body {
     background-color: #50A8AD;
@@ -49,3 +49,12 @@ li {
     font-size:25px;
 }
 
+#Label1{
+    color:green
+}
+img{
+    transition:all ease-in 0.2s;
+}
+img:hover{
+   transform:scale(1.03)
+}

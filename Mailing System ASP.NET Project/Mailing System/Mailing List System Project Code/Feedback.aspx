@@ -43,7 +43,8 @@ font-style: normal;font-weight:400;font-size:18px" Text="Comment/Query"></asp:La
             position: absolute; top: 535px; width: 190px;" TextMode="MultiLine"></asp:TextBox>
         <asp:Button ID="btnsubmit" runat="server" OnClick="btnsubmit_Click" Style="border-style: none; border-color: inherit; border-width: medium; z-index: 107;
             left: 358px; position: absolute; top: 657px; width: 235px; background-color:#50A8AD; color:white; height: 36px;font-size:large;border-radius:9px
-        " Text="Submit" />
+        " Text="Submit" CssClass="button"/>
+      
         &nbsp;
         <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Larger" Style="z-index: 110;
             left: 344px; position: absolute; top: 492px; height: 21px; width: 39px; font-family: Roboto;
