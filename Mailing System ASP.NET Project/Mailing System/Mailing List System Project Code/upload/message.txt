@@ -1,0 +1,17 @@
+<script  type="text/javascript">
+		
+		  function ShowMessage()
+    {
+       
+    if(document.getElementById("message").value != "")
+    {
+      alert(document.getElementById("message").value);
+      document.getElementById("message").value = "";
+      }
+    }
+
+
+
+
+
+<input id="message"  type="hidden" runat="server" />

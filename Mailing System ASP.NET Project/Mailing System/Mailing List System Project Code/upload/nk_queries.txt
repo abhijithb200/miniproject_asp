@@ -1,0 +1,38 @@
+1) 
+create table courses(coursecode char(8) primary key, title varchar(50), 
+version varchar(10), duration smallint, fee numeric, 
+otherfee numeric, status char(2), remarks varchar(100), 
+prerequisite varchar(100))
+
+
+
+
+2) 
+create table batches(batchno char(5) primary key, coursecode char(8), 
+expstdate datetime, announceddate datetime, trackdesc varchar(20), 
+displayremarks varchar(50), displayreqd int identity, displayorder	tinyint) 
+
+
+
+
+
+3)
+foreign key for courses and batches
+
+alter table batches add CONSTRAINT fk_coursecode FOREIGN KEY(coursecode)
+REFERENCES courses(coursecode)
+
+
+4)
+insert into batches(batchno,coursecode,expstdate,announceddate,
+trackdesc,displayremarks,displayorder)
+values('nk1','j1','1/1/01','1/1/01','hai','hello',1)
+
+5)
+select c.title,b.expstdate from courses c,batches b where 
+c.coursecode=b.coursecode and b.displayreqd='true'
+
+6)
+select convert(varchar,expstdate,107) from batches    --  for mar 05 2005
+
+select c.title Course, substring(convert(varchar,b.expstdate,107),0,7 ) Date  from courses c,batches b where c.coursecode=b.coursecode and b.displayreqd='true'  -- for mar 05

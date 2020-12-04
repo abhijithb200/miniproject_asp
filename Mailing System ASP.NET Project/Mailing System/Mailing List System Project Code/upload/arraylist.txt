@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ArrayOfAnyType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <anyType xsi:type="xsd:string">pratihbha</anyType>
+  <anyType xsi:type="xsd:string">Swathi</anyType>
+  <anyType xsi:type="xsd:string">Sandhya</anyType>
+  <anyType xsi:type="xsd:string">Varma</anyType>
+</ArrayOfAnyType>

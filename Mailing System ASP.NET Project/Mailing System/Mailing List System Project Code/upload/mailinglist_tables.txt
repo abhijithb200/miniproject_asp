@@ -1,0 +1,49 @@
+CREATE TABLE [dbo].[adminusers](
+	[adminuser] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[adminpwd] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+
+
+
+
+
+
+
+
+CREATE TABLE [dbo].[feedback](
+	[subfeedback] [varchar](200) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[emailid] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[date] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[comment] [varchar](100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+
+
+
+
+
+
+
+CREATE TABLE [dbo].[newregistration](
+	[name] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[surname] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[password] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[confirmpassword] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[dob] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[gender] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[emailid] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[alternateemailid] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[otherdetails] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[regid] [int] IDENTITY(1,1) NOT NULL
+) ON [PRIMARY]
+
+
+
+
+
+CREATE TABLE [dbo].[user_subject](
+	[regid] [int] NOT NULL,
+	[emailid] [varchar](30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[date] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[subject] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[resumepath] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]

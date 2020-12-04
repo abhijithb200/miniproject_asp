@@ -1,0 +1,1 @@
+create table newreg(username varchar(25),pwd varchar(25),cpwd varchar(25),gender varchar(25))

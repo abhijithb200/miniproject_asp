@@ -1,0 +1,58 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="user" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+   <title>Mailing List System</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" type="text/css" href="css/fix.css" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="css/fix.css" type="text/css" />
+	<![endif]-->
+</head>
+<body >
+    <form id="form1" runat="server">
+    <div>
+    <div id="container">
+			<div id="header">
+				
+            <div id="title"><span id="top">Mailing List System</span> <br />
+             </div>
+				<div id="navcontainer">
+            <ul id="navlist">
+              <li id="active"><a href="loginhome.aspx" id="current" >Home</a></li>
+              <li><a href="viewprofile.aspx">Edit Profile</a></li>
+              <li><a href="Feedback.aspx"  >FeedBack</a></li>
+              <li><a href="profileposting.aspx" >profileposting</a></li>
+            </ul>
+		 		</div>			
+			</div>	
+			<div id="slogan">
+					 
+    
+			</div>
+    		<div id="twocolumn">
+    
+      						
+					
+          
+      						
+      
+								
+						<div id="clearboth"></div>						 
+      </div>
+  			<div id="content">
+  				<div id="one" style="width: 98%;" >
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+      		</div>
+  			</div>
+				<div id="footer">
+						 
+	</div>					
+    </div>
+    </form>
+ 
+</body>
+</html>

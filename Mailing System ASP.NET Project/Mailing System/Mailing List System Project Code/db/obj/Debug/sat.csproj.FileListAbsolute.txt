@@ -1,0 +1,2 @@
+C:\Users\Unni\Desktop\miniproject\Mailing System ASP.NET Project\Mailing System\Mailing List System Project Code\db\obj\Debug\sat.csprojAssemblyReference.cache
+C:\Users\Unni\Desktop\miniproject\Mailing System ASP.NET Project\Mailing System\Mailing List System Project Code\db\obj\Debug\sat.csproj.CoreCompileInputs.cache

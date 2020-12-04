@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="login.master.cs" Inherits="login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+  <title>Mailing List System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Your Website Description" />
+<meta name="keywords" content="keywords, go, here" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="content">
+		<div id="flex-top">
+             <div id="top"> 
+        <h1>Mailing List System</h1>
+       </div>
+		
+        <div id="menu">
+            <ul>
+            <li ><a href="adminlogin.aspx" >Admin</a></li>
+            <li><a href="userlogin.aspx" >User</a></li>
+            <li><a href="register.aspx" >Register</a></li>
+
+            </ul>
+</div>
+
+		</div>
+     
+        <div id="header" >
+			
+			
+		</div>
+	
+			
+			
+		
+		<div id="main">
+            <table style="width:100%">
+                <tr>
+                    <td >
+                        <asp:ScriptManager ID="ScriptManger1" runat="Server">
+</asp:ScriptManager>
+                        <asp:ContentPlaceHolder  ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+               
+            </table>
+			
+		</div>
+		
+		
+	</div>
+    </div>
+    </form>
+</body>
+</html>

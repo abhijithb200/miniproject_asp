@@ -1,0 +1,152 @@
+ 
+CREATE TABLE [dbo].[admin_users](
+	[admin_name] [varchar](20)NOT NULL,
+	[admin_pwd] [varchar](20)NOT NULL,
+ CONSTRAINT [PK_admin_users] PRIMARY KEY CLUSTERED 
+(
+	[admin_name] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+ 
+
+ 
+
+
+
+ CREATE TABLE [dbo].[creditcard](
+	[reg_id] [int] NOT NULL,
+	[creditcard] [int] NOT NULL,
+	[amount] [int] NOT NULL,
+ CONSTRAINT [PK_creditcard] PRIMARY KEY CLUSTERED 
+(
+	[reg_id] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+
+
+
+
+ 
+CREATE TABLE [dbo].[feedback](
+	[sub_feedback] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[emailid] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[date] [datetime] NOT NULL,
+	[comment] [varchar](150) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+
+ 
+
+
+
+
+
+
+
+
+
+ CREATE TABLE [dbo].[policies](
+	[pol_id] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[pol_name] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[pol_details] [varchar](200) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+ CONSTRAINT [PK_policies] PRIMARY KEY CLUSTERED 
+(
+	[pol_id] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+ 
+
+
+
+
+
+
+
+
+
+ CREATE TABLE [dbo].[premium](
+	[pol_id] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_id] [int] NOT NULL,
+	[date_pay] [datetime] NOT NULL,
+	[amt_paid] [int] NOT NULL
+) ON [PRIMARY]
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CREATE TABLE [dbo].[reg_policy](
+	[reg_name] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_surname] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_password] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_emailid] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_date] [datetime] NOT NULL,
+	[reg_mobile] [int] NOT NULL,
+	[reg_phone] [int] NULL,
+	[reg_dob] [datetime] NOT NULL,
+	[reg_gender] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_presaddr] [varchar](150) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_city] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_state] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_pincode] [int] NOT NULL,
+	[reg_permaddr] [varchar](150) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_qual] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_desg] [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_offaddr] [varchar](150) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_offcity] [varchar](15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_offphone] [int] NULL,
+	[reg_licnum] [int] NULL,
+	[reg_passportnum] [int] NULL,
+	[reg_income] [int] NULL,
+	[reg_polname] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_assamt] [int] NOT NULL,
+	[reg_premfreq] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_nom1] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_nom2] [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[reg_others] [varchar](200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[reg_id] [int] IDENTITY(1,1) NOT NULL
+) ON [PRIMARY]
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ CREATE TABLE [dbo].[users_policies](
+	[reg_id] [int] NOT NULL,
+	[pol_id] [varchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+
+ 
+

@@ -1,0 +1,3 @@
+1) type the foll. in msdn url text box
+
+ms-help://MS.MSDNQTR.v80.en/MS.MSDN.v80/MS.VisualStudio.v80.en/dv_aspnetctrlauth/html/fbe26c16-cff4-4089-b3dd-877411f0c0ef.htm
