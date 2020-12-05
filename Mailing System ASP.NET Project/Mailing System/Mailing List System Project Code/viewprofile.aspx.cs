@@ -37,6 +37,7 @@ public partial class viewprofile : System.Web.UI.Page
             lblname.Text = dr["name"].ToString();
             lblpassword.Text = dr["password"].ToString();
             lblsurname.Text = dr["surname"].ToString();
+            
         }
     }
     protected void lbtnprofile_Click(object sender, EventArgs e)

@@ -32,7 +32,7 @@ public partial class userlogin : System.Web.UI.Page
             cn = new SqlConnection(cnstr);
 
             cn.Open();
-            da = new SqlDataAdapter("select emailid,regid,password from newregistration", cn);
+            da = new SqlDataAdapter("select emailid,regid,password,name,surname from newregistration", cn);
             ds = new DataSet();
             da.Fill(ds, "newregistration");
             user = TextBox1.Text;
@@ -45,6 +45,8 @@ public partial class userlogin : System.Web.UI.Page
                 if (user.Equals(drm["emailid"].ToString()) && pwd.Equals(drm["password"].ToString()))
                     flag = 1;
                 Session["user"] = drm["regid"].ToString();
+                Session["user_email"] = drm["emailid"].ToString();
+                Session["user_name"] = drm["name"].ToString() +" "+ drm["surname"].ToString();
             }
             if (flag == 1)
             {

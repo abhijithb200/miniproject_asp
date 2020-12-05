@@ -11,31 +11,31 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position: absolute; top: 51px; text-align: left;color:white;font-weight:100"
         Text="Profile" Width="90px"></asp:Label>
     <asp:Label ID="lblname" runat="server" Font-Size="Small" Style="font-weight: bold;
-        z-index: 102; left: 276px; color: white; font-style: italic; position: absolute;
-        top: 144px; height: 19px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="username" Width="101px"></asp:Label>
+        z-index: 102; left: 222px; color: white; font-style: italic; position: absolute;
+        top: 149px; height: 19px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="username" Width="101px"></asp:Label>
     <asp:Label ID="lblpassword" runat="server" Font-Size="Small" Height="15px" Style="font-weight: bold;
-        z-index: 103; left: 277px; color: white; font-style: italic; position: absolute;
-        top: 186px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="password" Width="101px"></asp:Label>
-    <asp:Label ID="Label2" runat="server" Style="z-index: 104; left: 133px; position: absolute;
+        z-index: 103; left: 223px; color: white; font-style: italic; position: absolute;
+        top: 193px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="password" Width="101px"></asp:Label>
+    <asp:Label ID="Label2" runat="server" Style="z-index: 104; left: 85px; position: absolute;
         top: 188px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="Password :"></asp:Label>
-    <asp:Label ID="Label5" runat="server" Style="z-index: 105; left: 137px; position: absolute;
+    <asp:Label ID="Label5" runat="server" Style="z-index: 105; left: 87px; position: absolute;
         top: 228px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="Lastname :"></asp:Label>
-    <asp:Label ID="Label4" runat="server" Style="z-index: 106; left: 150px; position: absolute;
-        top: 270px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px; width: 104px; right: 229px; height: 29px;" Text="Email ID :"></asp:Label>
-    <asp:Label ID="Label6" runat="server" Style="z-index: 107; left: 106px; position: absolute;
-        top: 313px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="Date of Birth :"></asp:Label>
+    <asp:Label ID="Label4" runat="server" Style="z-index: 106; left: 96px; position: absolute;
+        top: 270px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px; width: 104px; right: 300px; height: 29px;" Text="Email ID :"></asp:Label>
+    <asp:Label ID="Label6" runat="server" Style="z-index: 107; left: 48px; position: absolute;
+        top: 312px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="Date of Birth :"></asp:Label>
     <asp:Label ID="lbldob" runat="server" Font-Size="Small" Style="font-weight: bold;
-        z-index: 109; left: 286px; color: white; font-style: italic; position: absolute;
-        top: 310px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px; height: 35px;" Text=" DOB " Width="101px"></asp:Label>
+        z-index: 109; left: 223px; color: white; font-style: italic; position: absolute;
+        top: 311px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px; height: 35px; width: 180px;" Text=" DOB "></asp:Label>
     <asp:Label ID="lblmailid" runat="server" Font-Size="Small" Style="font-weight: bold;
-        z-index: 110; left: 281px; color: white; font-style: italic; position: absolute;
-        top: 268px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="emailid" Width="101px"></asp:Label>
+        z-index: 110; left: 223px; color: white; font-style: italic; position: absolute;
+        top: 271px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px; width: 160px;" Text="emailid"></asp:Label>
     <asp:Label ID="lblsurname" runat="server" Font-Size="Small" Style="font-weight: bold;
-        z-index: 111; left: 280px; color: white; font-style: italic; position: absolute;
-        top: 228px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="surname" Width="101px"></asp:Label>
+        z-index: 111; left: 225px; color: white; font-style: italic; position: absolute;
+        top: 231px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="surname" Width="101px"></asp:Label>
     <asp:LinkButton ID="lbtnprofile" runat="server" OnClick="lbtnprofile_Click" Style="z-index: 100;
         left: 295px; position: absolute; top: 383px; height: 19px;color:white">Edit Profile</asp:LinkButton>
-    <asp:Label ID="Label7" runat="server" Style="z-index: 106; left: 120px; position: absolute;
+    <asp:Label ID="Label7" runat="server" Style="z-index: 106; left: 73px; position: absolute;
         top: 144px; height: 19px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:25px" Text="UserName :"></asp:Label>
     <br />
     <br />

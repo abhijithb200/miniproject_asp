@@ -17,7 +17,24 @@ public partial class userhome : System.Web.UI.Page
           if (!IsPostBack) 
         {
             tbxdate.Text = System.DateTime.Now.ToShortDateString();
+            string id = (string)Session["user"];
+            string email = (string)Session["user_email"];
+            string name = (string)Session["user_name"];
+            if (id != null)
+            {
+                topname.Text = name;
+                topemail.Text = email;
+                tbxregid.Text = id;
+                tbxregid.ReadOnly = true;
+                tbxemailid.Text = email;
+                tbxemailid.ReadOnly = true;
+            }
+            else
+            {
+                Response.Redirect("adminlogin.aspx");
+            }
         }
+       
     }
 protected void  CheckBox1_CheckedChanged(object sender, EventArgs e)
 {

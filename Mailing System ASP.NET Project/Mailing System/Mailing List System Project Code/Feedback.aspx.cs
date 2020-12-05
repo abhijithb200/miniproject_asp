@@ -19,6 +19,12 @@ public partial class Feedback : System.Web.UI.Page
             tbxdate.Text = System.DateTime.Now.ToShortDateString();
 
         }
+        string email = (string)Session["user_email"];
+        if (email.Length >1)
+        {
+            tbxemailid.Text = email;
+            tbxemailid.ReadOnly = true;
+        }
     }
     protected void btnsubmit_Click(object sender, EventArgs e)
     {
