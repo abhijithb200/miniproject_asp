@@ -21,7 +21,7 @@
              </div>
 				<div id="navcontainer">
             <ul id="navlist">
-              <li id="active"><a href="loginhome.aspx" id="current" >Home</a></li>
+              <li id="active"><a href="userhome.aspx" id="current" >Home</a></li>
               <li><a href="viewprofile.aspx">Edit Profile</a></li>
               <li><a href="Feedback.aspx"  >FeedBack</a></li>
               <li><a href="profileposting.aspx" >profileposting</a></li>

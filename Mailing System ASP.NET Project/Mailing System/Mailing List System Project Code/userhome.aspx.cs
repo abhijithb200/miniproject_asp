@@ -13,6 +13,7 @@ public partial class userhome : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
 
        // Response.Write("<script>alert('"+Session["user"] +"')</script>");
     }

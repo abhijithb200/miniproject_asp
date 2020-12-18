@@ -31,7 +31,7 @@ public partial class userhome : System.Web.UI.Page
             }
             else
             {
-                Response.Redirect("adminlogin.aspx");
+                Response.Redirect("userlogin.aspx");
             }
         }
        

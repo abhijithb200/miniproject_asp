@@ -15,7 +15,7 @@ public partial class register : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Button1.Visible = false;
+        Button1.Style["opacity"] = "0.5";
         Button1.Enabled = false;
     }
     protected void Button1_Click(object sender, EventArgs e)
@@ -128,7 +128,7 @@ public partial class register : System.Web.UI.Page
     {
         if (txtotp.Text == otpequal.Text)
         {
-            Button1.Visible = true;
+            Button1.Style["opacity"] = "1";
             Button1.Enabled = true;
             Button1.Text = "Proceed";
         }
