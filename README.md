@@ -1,2 +1,2 @@
 # miniproject_asp
--Mailing list system
+-Mailing system
