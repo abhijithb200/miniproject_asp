@@ -6,7 +6,9 @@ body {
     background-color: #50A8AD;
     background-size: cover;
 }
-
+title{
+    font-size:90px;
+}
 #header {
     display: flex;
     justify-content: space-between;

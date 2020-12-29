@@ -68,44 +68,53 @@ public partial class maillistingsystem : System.Web.UI.Page
     }
     protected void dgrid_ItemCommand(object source, DataGridCommandEventArgs e)
     {
-      try 
+        if (tbxbody.Text.Length > 2 || tbxsubject.Text.Length > 2)
         {
-        DataGridItem dgi;
-            int i = 0;
-        string s=e.Item .Cells [1].Text.ToString ();
-            var fromAddress = new MailAddress("abhijithb007m@gmail.com", "Abhijith");
-            var toAddress = new MailAddress(s, "Abhinand");
-            const string fromPassword = "Abhi@4455";
-            const string subject = "Subject";
-            const string body = "Body";
 
-            var smtp = new SmtpClient
+
+            try
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            };
-            using (var message = new MailMessage(fromAddress, toAddress)
-            {
-                Subject = subject,
-                Body = body
-            })
-            {
-                smtp.Send(message);
+                DataGridItem dgi;
+                int i = 0;
+                string s = e.Item.Cells[1].Text.ToString();
+                var fromAddress = new MailAddress("abhijithb007m@gmail.com", "Mailing List System");
+                var toAddress = new MailAddress(s);
+                const string fromPassword = "Abhi@4455";
+                 string subject = tbxsubject.Text;
+                 string body = tbxbody.Text;
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                };
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
+
+
+
+                Response.Write("<script>alert('Message Has Been Sent')</script>");
+
             }
-
-
-
-            Response.Write("<script>alert('Message Has Been Sent')</script>");
-          
+            catch (System.Exception i)
+            {
+                Response.Write("<script>alert('Message  Sending Failed')</script>");
+                Response.Write(i);
+            }
         }
-        catch (System .Exception i)
+        else
         {
-            Response.Write ("<script>alert('Message  Sending Failed')</script>");
-            Response.Write(i);
+            Response.Write("<script>alert('Please fill subject and body')</script>");
         }
     }
 }
