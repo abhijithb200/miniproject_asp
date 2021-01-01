@@ -40,8 +40,7 @@
         <ItemStyle BackColor="#EFF3FB" />
         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
     </asp:DataGrid>
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Style="z-index: 107;
-        left: 361px; position: absolute; top: 737px" Text="Main menu" />
+   
         <asp:TextBox ID="tbxbody" runat="server" Style="z-index: 106; left: 804px;
             position: absolute; top: 309px; width: 297px; height: 173px;" TextMode="MultiLine"></asp:TextBox>
         <asp:TextBox ID="tbxsubject" runat="server" Style="z-index: 111; left: 808px; position: absolute;

@@ -7,7 +7,7 @@
         Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
         ForeColor="Black" GridLines="None" Height="96px" OnItemCommand="DataGrid1_ItemCommand"
         OnSelectedIndexChanged="DataGrid1_SelectedIndexChanged1" Style="z-index: 101;
-        left: 331px; position: absolute; top: 288px" Width="612px">
+        left: 331px; position: absolute; top: 288px" Width="612px" >
         <Columns>
             <asp:TemplateColumn></asp:TemplateColumn>
             <asp:ButtonColumn DataTextField="comment"></asp:ButtonColumn>
@@ -30,11 +30,9 @@
 </script>
 
 
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Style="z-index: 102;
-        left: 406px; position: absolute; top: 564px; height: 21px;" 
-        Text="Mainmenu" />
+    
     <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Style="z-index: 103;
-        left: 312px; position: absolute; top: 129px" Text="Online Views" Width="188px"></asp:Label>
+        left: 332px; position: absolute; top: 193px;color:white" Text="Feedbacks" Width="188px" ></asp:Label>
     <br />
     <br />
     <br />

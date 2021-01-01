@@ -12,7 +12,7 @@
 	<![endif]-->
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" style="height:auto">
     
     <div id="container">
 			<div id="header">
@@ -57,7 +57,6 @@
     </div>
     </form>
 						 
-    <div class="copy">Copyright &copy; 2006 |All Rights Reserved</div>
 						 
 	</body>
 </html>

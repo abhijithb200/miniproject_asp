@@ -14,32 +14,31 @@ using System.Data.SqlClient;
 public partial class masterentry : System.Web.UI.Page
 {
     string cnstr = ConfigurationSettings.AppSettings["dbconnection"];
-    SqlConnection cn;
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         if (!IsPostBack)
         {
             if (Session["admin"] != null)
             {
 
 
-                SqlConnection cn = null;
+                string query = "select * from newregistration";
 
-              
-                cn = new SqlConnection(cnstr);
 
-                string query = "select regid, name,surname,dob,gender,emailid,alternateemailid,otherdetails from newregistration";
-
+                
+                SqlConnection cn = new SqlConnection(cnstr);
                 cn.Open();
 
 
+                SqlDataAdapter da = new SqlDataAdapter(query, cn);
 
+                DataSet ds = new DataSet();
 
-                SqlCommand cmd = new SqlCommand(query, cn);
-                dgrid.DataSource = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                da.Fill(ds, "newregistration");
+
+                dgrid.DataSource   = ds;
                 dgrid.DataBind();
-
-
 
 
 
@@ -56,8 +55,7 @@ public partial class masterentry : System.Web.UI.Page
                     tbxdob.Text = dgrid.Items[0].Cells[3].Text;
                     tbxgender.Text = dgrid.Items[0].Cells[4].Text;
                     tbxemailid.Text = dgrid.Items[0].Cells[5].Text;
-                    tbxalternateemail.Text = dgrid.Items[0].Cells[6].Text;
-                    tbxotherdetails.Text = dgrid.Items[0].Cells[7].Text;
+
 
 
 
@@ -100,9 +98,7 @@ public partial class masterentry : System.Web.UI.Page
         tbxdob.Text = e.Item.Cells[3].Text;
         tbxgender.Text = e.Item.Cells[4].Text;
         tbxemailid.Text = e.Item.Cells[5].Text;
-        tbxalternateemail.Text = e.Item.Cells[6].Text;
-        tbxotherdetails.Text = e.Item.Cells[7].Text;
-
+      
 
 
 
@@ -134,7 +130,7 @@ public partial class masterentry : System.Web.UI.Page
         cn = new SqlConnection(cnstr);
         cn.Open();
 
-        string query1 = "update newregistration set name='" + tbxname.Text + "'," + "surname='" + tbxsurname.Text + "'," + "dob='" + tbxdob.Text + "'," + "gender='" + tbxgender.Text + "'," + "emailid='" + tbxemailid.Text + "'," + "alternateemailid='" + tbxalternateemail.Text + "'," + "otherdetails='" + tbxotherdetails.Text + "'" + "where regid=" + tbxregid.Text;
+        string query1 = "update newregistration set name='" + tbxname.Text + "'," + "surname='" + tbxsurname.Text + "'," + "dob='" + tbxdob.Text + "'," + "gender='" + tbxgender.Text + "'," + "emailid='" + tbxemailid.Text + "'" + "where regid=" + tbxregid.Text;
 
         SqlCommand cmd = new SqlCommand(query1, cn);
 
@@ -151,7 +147,7 @@ public partial class masterentry : System.Web.UI.Page
         cn = new SqlConnection(cnstr);
         cn.Open();
 
-        string query1 = "update newregistration set name='" + tbxname.Text + "'," + "surname='" + tbxsurname.Text + "'," + "dob='" + tbxdob.Text + "'," + "gender='" + tbxgender.Text + "'," + "emailid='" + tbxemailid.Text + "'," + "alternateemailid='" + tbxalternateemail.Text + "'," + "otherdetails='" + tbxotherdetails.Text + "'" + "where regid=" + tbxregid.Text;
+        string query1 = "update newregistration set name='" + tbxname.Text + "'," + "surname='" + tbxsurname.Text + "'," + "dob='" + tbxdob.Text + "'," + "gender='" + tbxgender.Text + "'," + "emailid='" + tbxemailid.Text +  "'" + "where regid=" + tbxregid.Text;
 
         SqlCommand cmd = new SqlCommand(query1, cn);
 
@@ -170,8 +166,7 @@ protected void  btncancel_Click(object sender, EventArgs e)
         tbxdob.Text = dgrid.Items[0].Cells[3].Text;
         tbxgender.Text = dgrid.Items[0].Cells[4].Text;
         tbxemailid.Text = dgrid.Items[0].Cells[5].Text;
-        tbxalternateemail.Text = dgrid.Items[0].Cells[6].Text;
-        tbxotherdetails.Text = dgrid.Items[0].Cells[7].Text;
+       
 
 
 }
@@ -200,7 +195,7 @@ protected void  btnfind_Click(object sender, EventArgs e)
 
    
     cn = new SqlConnection(cnstr);
-    string findquery = " select regid,name,surname,dob,gender,emailid,alternateemailid,otherdetails from newregistration where regid=" + tbxregid.Text;
+    string findquery = " select regid,name,surname,dob,gender,emailid from newregistration where regid=" + tbxregid.Text;
     SqlCommand cmdfind = new SqlCommand(findquery, cn);
     cn.Open();
 
@@ -215,9 +210,7 @@ protected void  btnfind_Click(object sender, EventArgs e)
         tbxdob.Text = dr["dob"].ToString();
         tbxgender.Text = dr["gender"].ToString();
         tbxemailid.Text = dr["emailid"].ToString();
-        tbxalternateemail.Text = dr["alternateemailid"].ToString();
-        tbxotherdetails.Text = dr["otherdetails"].ToString();
-
+      
 
     }
 
@@ -240,8 +233,7 @@ protected void  btnclear_Click(object sender, EventArgs e)
         tbxdob.Text = "";
         tbxgender.Text = "";
         tbxemailid.Text = "";
-        tbxalternateemail.Text = "";
-        tbxotherdetails.Text = ""; 
+     
 
 }
 }
