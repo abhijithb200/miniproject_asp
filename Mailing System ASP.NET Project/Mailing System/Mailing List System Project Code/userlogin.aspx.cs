@@ -43,10 +43,12 @@ public partial class userlogin : System.Web.UI.Page
             foreach (DataRow drm in ds.Tables["newregistration"].Rows)
             {
                 if (user.Equals(drm["emailid"].ToString()) && pwd.Equals(drm["password"].ToString()))
+                {
                     flag = 1;
-                Session["user"] = drm["regid"].ToString();
-                Session["user_email"] = drm["emailid"].ToString();
-                Session["user_name"] = drm["name"].ToString() +" "+ drm["surname"].ToString();
+                    Session["user"] = drm["regid"].ToString();
+                    Session["user_email"] = drm["emailid"].ToString();
+                    Session["user_name"] = drm["name"].ToString() + " " + drm["surname"].ToString();
+                }
             }
             if (flag == 1)
             {
