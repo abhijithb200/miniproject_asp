@@ -17,7 +17,7 @@
     <div class="body" style="background-image:url(images/userbg.jpg)">
        
     </div>
-     <h2 class="hello">Hello,<br /><span class="name" id="name">Abhijith B</span></h2>
-   
+     <h2 class="hello">Hello,<br />    <asp:Label runat="server" Text="Abhijith b" CssClass="name" ID="labelname"></asp:Label>
+</h2>
 </div>
 

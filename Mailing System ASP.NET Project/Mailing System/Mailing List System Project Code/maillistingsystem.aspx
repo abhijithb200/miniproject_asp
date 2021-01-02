@@ -12,7 +12,7 @@
         position: absolute; top: 214px;font-size:20px" Text="Select your requirement"></asp:Label>
     <asp:DataGrid ID="dgrid" runat="server" AutoGenerateColumns="False" CellPadding="4"
         ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="dgrid_SelectedIndexChanged"
-        Style="z-index: 105; left: 63px; position: absolute; top: 308px; width: 513px; height: 161px;" OnItemCommand="dgrid_ItemCommand">
+        Style="z-index: 105; left: 63px; position: absolute; top: 308px; width: 570px; height: 161px;" OnItemCommand="dgrid_ItemCommand">
         <Columns>
             <asp:BoundColumn DataField="regid" HeaderText="Reg ID"></asp:BoundColumn>
             <asp:BoundColumn DataField="emailid" HeaderText="Email ID"></asp:BoundColumn>

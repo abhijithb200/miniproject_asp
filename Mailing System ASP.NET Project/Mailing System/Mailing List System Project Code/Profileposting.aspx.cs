@@ -47,8 +47,8 @@ protected void  Button1_Click(object sender, EventArgs e)
         {
 
 
-            string filename = System.IO.Path.GetFileName(FileUpload1.PostedFile.FileName);
-            string destr = Server.MapPath("~/upload");
+            string filename = FileUpload1.FileName;
+            string destr = Server.MapPath("~/Mailing System/Mailing List System Project Code/upload");
             string destpath = System.IO.Path.Combine(destr, filename);
             FileUpload1.PostedFile.SaveAs(destpath);
             string ddff=FileUpload1 .FileName .ToString ();

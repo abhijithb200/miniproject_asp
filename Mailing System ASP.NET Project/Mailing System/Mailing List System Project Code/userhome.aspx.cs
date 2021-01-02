@@ -13,8 +13,16 @@ public partial class userhome : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["user_name"] != null)
+        {
+            string name = (string)Session["user_name"];
+            labelname.Text = name;
+        }
+        else
+        {
+            Response.Redirect("userlogin.aspx");
+        }
         
-
-       // Response.Write("<script>alert('"+Session["user"] +"')</script>");
+        // Response.Write("<script>alert('"+Session["user"] +"')</script>");
     }
 }
