@@ -29,8 +29,8 @@ public partial class onlineview : System.Web.UI.Page
 
                 SqlCommand cmd = new SqlCommand(query, cn);
 
-                DataGrid1.DataSource = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-                DataGrid1.DataBind();
+                Repeater1.DataSource = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                Repeater1.DataBind();
 
             }
         }
@@ -53,10 +53,5 @@ public partial class onlineview : System.Web.UI.Page
     {
         Response.Redirect("adminlogin.aspx");
     }
-    protected void DataGrid1_ItemCommand(object source, DataGridCommandEventArgs e)
-    {
-        Session["details"] = DataGrid1.DataKeys[e.Item.ItemIndex].ToString();
-
-        Response.Redirect("feedbackreply.aspx");
-    }
+   
 }

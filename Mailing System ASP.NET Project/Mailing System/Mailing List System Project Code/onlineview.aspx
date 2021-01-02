@@ -2,21 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 
-    <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow"
-        BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyField="details" Font-Bold="False"
-        Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
-        ForeColor="Black" GridLines="None" Height="96px" OnItemCommand="DataGrid1_ItemCommand"
-        OnSelectedIndexChanged="DataGrid1_SelectedIndexChanged1" Style="z-index: 101;
-        left: 331px; position: absolute; top: 288px" Width="612px" >
-        <Columns>
-            <asp:TemplateColumn></asp:TemplateColumn>
-            <asp:ButtonColumn DataTextField="comment"></asp:ButtonColumn>
-            <asp:BoundColumn DataField="subfeedback"></asp:BoundColumn>
-            <asp:BoundColumn DataField="emailid"></asp:BoundColumn>
-            <asp:BoundColumn DataField="date"></asp:BoundColumn>
-            <asp:BoundColumn DataField="comment"></asp:BoundColumn>
-        </Columns>
-    </asp:DataGrid>
+   
 <script type="text/javascript" >
       
         
@@ -32,13 +18,33 @@
 
     
     <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Style="z-index: 103;
-        left: 332px; position: absolute; top: 193px;color:white" Text="Feedbacks" Width="188px" ></asp:Label>
+        left: 212px; position: absolute; top: 230px; color:white" Text="Feedbacks" Width="188px" ></asp:Label>
     <br />
     <br />
     <br />
+    
     <br />
-    <br />
-    <br />
+    <div style="margin-left:auto;margin-right:auto;width:70%;margin-top:190px;background-color:#9999;padding:30px">
+    <asp:Repeater ID="Repeater1" runat="server" >
+        <ItemTemplate >
+           <div style="margin-top:20px;background-color:white;padding:10px">
+               <div style="display:flex;align-items:center">
+               <image src="images/picture.png" width="50px" />
+    <asp:Label ID="Label3" runat="server" Text='<%#Eval("emailid") %>' Style="font-size:19px;font-weight:500;padding-right:20px;padding-left:5px"></asp:Label>
+                
+               <asp:Label ID="Label2" runat="server" Text='<%#Eval("date") %>' Style="color:grey"></asp:Label>
+                   </div>
+               
+               <div style="padding-left:60px">
+               <asp:Label ID="Label4" runat="server" Text='<%#Eval("subfeedback") %>' style="font-size:24px;font-weight:600"></asp:Label>
+    
+   
+    <div runat="server" innerText='<%#Eval("comment") %>' style="padding-top:10px;font-size:18px"></div>
+                   </div>
+               </div>
+     </ItemTemplate>
+    </asp:Repeater>
+        </div>
     <br />
     <br />
     <br />
