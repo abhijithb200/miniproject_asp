@@ -72,9 +72,9 @@ public partial class register : System.Web.UI.Page
             try
             {
 
-                var fromAddress = new MailAddress("abhijithb007m@gmail.com", "Mailing List System");
+                var fromAddress = new MailAddress("mailingsystem8@gmail.com", "Mailing List System");
                 var toAddress = new MailAddress(txtmailid.Text, "Abhinand");
-                const string fromPassword = "Abhi@4455";
+                const string fromPassword = "mailingsystem12";
                 const string subject = "OTP for the mailing sytem";
                 string body = "The otp for the mailing system is <br> <h1>" + Random + "</h1>";
 
