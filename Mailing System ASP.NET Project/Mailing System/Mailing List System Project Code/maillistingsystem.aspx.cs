@@ -77,9 +77,9 @@ public partial class maillistingsystem : System.Web.UI.Page
                 DataGridItem dgi;
                 int i = 0;
                 string s = e.Item.Cells[1].Text.ToString();
-                var fromAddress = new MailAddress("abhijithb007m@gmail.com", "Mailing List System");
+                var fromAddress = new MailAddress("mailingsystem8@gmail.com", "Mailing List System");
                 var toAddress = new MailAddress(s);
-                const string fromPassword = "Abhi@4455";
+                const string fromPassword = "mailingsystem12";
                  string subject = tbxsubject.Text;
                  string body = tbxbody.Text;
 
