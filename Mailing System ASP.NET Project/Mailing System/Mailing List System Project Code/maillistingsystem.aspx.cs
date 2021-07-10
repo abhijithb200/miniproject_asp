@@ -104,6 +104,8 @@ public partial class maillistingsystem : System.Web.UI.Page
 
 
                 Response.Write("<script>alert('Message Has Been Sent')</script>");
+                e.Item.Cells[5].Text = "SENDED";
+                e.Item.Cells[5].ForeColor = System.Drawing.ColorTranslator.FromHtml("green");
 
             }
             catch (System.Exception i)

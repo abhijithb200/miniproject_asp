@@ -6,13 +6,15 @@
         <asp:ListItem Value="Java"></asp:ListItem>
         <asp:ListItem Value=".Net"></asp:ListItem>
         <asp:ListItem Value="Oracle"></asp:ListItem>
-        <asp:ListItem Value="C,C++"></asp:ListItem>
+        <asp:ListItem Value="C"></asp:ListItem>
+        <asp:ListItem Value="C++"></asp:ListItem>
+
     </asp:DropDownList>
     <asp:Label ID="Label3" runat="server" Font-Bold="True" Style="z-index: 104; left: 70px;
         position: absolute; top: 214px;font-size:20px" Text="Select your requirement"></asp:Label>
     <asp:DataGrid ID="dgrid" runat="server" AutoGenerateColumns="False" CellPadding="4"
         ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="dgrid_SelectedIndexChanged"
-        Style="z-index: 105; left: 63px; position: absolute; top: 308px; width: 570px; height: 161px;" OnItemCommand="dgrid_ItemCommand">
+        Style="z-index: 105; left: 63px; position: absolute; top: 308px; width: 570px; height: 161px;text-align:center;" OnItemCommand="dgrid_ItemCommand">
         <Columns>
             <asp:BoundColumn DataField="regid" HeaderText="Reg ID"></asp:BoundColumn>
             <asp:BoundColumn DataField="emailid" HeaderText="Email ID"></asp:BoundColumn>
@@ -22,7 +24,7 @@
                         DataTextField="resumepath" HeaderText="FileName"></asp:HyperLinkColumn>--%>
             <asp:TemplateColumn HeaderText="Files List">
                 <ItemTemplate>
-                    <asp:HyperLink ID="h1" runat="server" NavigateUrl='<%# "~/Mailing%20System/Mailing%20List%20System%20Project%20Code/upload/" + Eval("path") %>'
+                    <asp:HyperLink ID="h1" runat="server" NavigateUrl='<%# "~/upload/" + Eval("path") %>'
                         Target="_blank" Text='<%# Eval("path") %>'></asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateColumn>
