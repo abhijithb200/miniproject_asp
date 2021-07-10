@@ -31,7 +31,6 @@
                <div style="display:flex;align-items:center">
                <image src="images/picture.png" width="50px" />
                    <div style="display:flex;flex-direction:column">
-                   <asp:Label ID="Label5" runat="server" Text='<%#Eval("name") %>' Style="font-size:19px;font-weight:500;padding-right:20px;padding-left:5px"></asp:Label>
                    <asp:Label ID="Label3" runat="server" Text='<%#Eval("emailid") %>' Style="font-size:15px;font-weight:500;padding-right:20px;padding-left:5px;color:grey"></asp:Label>
                 </div>
                <asp:Label ID="Label2" runat="server" Text='<%#Eval("date") %>' Style="color:grey"></asp:Label>

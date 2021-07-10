@@ -32,7 +32,7 @@ public partial class Feedback : System.Web.UI.Page
         SqlConnection cn = new SqlConnection(cnstr);
         cn.Open();
         string name = (string)Session["user_name"];
-        string query = "insert into feedback values(@subfeedback,@emailid,@date,@comment,@name)";
+        string query = "insert into feedback values(@subfeedback,@emailid,@date,@comment)";
 
         SqlCommand cmd = new SqlCommand(query, cn);
 
@@ -41,7 +41,7 @@ public partial class Feedback : System.Web.UI.Page
 
 
         cmd.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-        cmd.Parameters.Add(new SqlParameter("@name", name));
+        
 
         cmd.Parameters.Add(new SqlParameter("@comment", tbxcomment.Text));
      

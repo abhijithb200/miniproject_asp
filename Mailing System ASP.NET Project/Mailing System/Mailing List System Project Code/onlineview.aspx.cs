@@ -23,7 +23,7 @@ public partial class onlineview : System.Web.UI.Page
                 string cnstr = ConfigurationSettings.AppSettings["dbconnection"];
                 cn = new SqlConnection(cnstr);
 
-                string query = "select subfeedback,emailid,name,date,comment, comment + '|'+ emailid details from feedback order by date desc";
+                string query = "select subfeedback,emailid,date,comment, comment + '|'+ emailid details from feedback order by date desc";
 
                 cn.Open();
 
