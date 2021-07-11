@@ -18,6 +18,32 @@
        
     </div>
      <h2 class="hello">Hello,<br />    <asp:Label runat="server" Text="Abhijith b" CssClass="name" ID="labelname"></asp:Label>
-</h2>
+     </h2>
+    <div style="min-width: 100%;
+    margin: 0px auto;
+    text-align: center;padding-top:40px;">
+        <h2 class="name" style="font-size:40px;">Welcome to mailing system.</h2>
+        <img src="/images/homedemo.gif" />
+ <div class="myprogress">
+  <div class="circle">
+    <span class="title">Register with your email</span>
+  </div>
+  <span class="bar done"></span>
+  <div class="circle">
+    <span class="title">Post your profile</span>
+  </div>
+     <span class="bar half"></span>
+  <div class="circle">
+    <span class="title">Check your email</span>
+  </div>
+  <span class="bar half"></span>
+  <div class="circle">
+    <span class="title">Wait for our reply</span>
+  </div>
+  
+ 
+</div>
+    </div>
+    
 </div>
 

@@ -66,4 +66,9 @@ public partial class edit : System.Web.UI.Page
     {
         Response.Redirect("userhome.aspx");
     }
+
+    protected void txtuser_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -87,3 +87,51 @@ li {
     color: #096B95;
     font-weight: 800;
 }
+.myprogress {
+    min-width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.myprogress {
+    min-width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+    .myprogress .circle,
+    .myprogress .bar {
+        
+        display: inline-block;
+        background: #fff;
+        width: auto;
+        height: auto;
+        border-radius:90px;
+        border: 1px solid #d5d5da;
+    }
+                
+
+
+    .myprogress .bar {
+        position: relative;
+        width: 80px;
+        height: 2px;
+        top: -5px;
+        border: 0px solid #d5d5da;
+        background: #000;
+    }
+
+    .myprogress .circle .label {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        line-height: 30px;
+        font-size: 24px;
+    }
+
+    .myprogress .circle .title {
+        color: #b5b5ba;
+        font-size: 24px;
+        line-height: 100px;
+        padding:20px;
+    }
