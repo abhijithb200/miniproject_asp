@@ -22,13 +22,13 @@
         &nbsp;&nbsp;
         &nbsp;
         <asp:RadioButton ID="rbtnfemale" runat="server" Style="z-index: 115; left: 703px;
-            position: absolute; top: 654px; width: 47px;" Text="Female" />
+            position: absolute; top: 654px; width: 47px;" Text="Female" GroupName="measurementSystem" />
         <asp:RadioButton ID="rbtnamale" runat="server" Style="z-index: 116; left: 636px;
-            position: absolute; top: 653px; width: 49px; height: 63px;" Text="Male" />
+            position: absolute; top: 653px; width: 49px; height: 63px;" Text="Male" GroupName="measurementSystem"/>
         <asp:TextBox ID="txtdob" runat="server" Style="z-index: 117; left: 630px; position: absolute;
             top: 616px; width: 157px;"></asp:TextBox>
         <asp:RequiredFieldValidator runat="server" id="reqName" controltovalidate="txtdob" errormessage="Please enter your name!" />
-
+       
         <asp:Label ID="Label7" runat="server" Style="z-index: 118; left: 498px; position: absolute;
             top: 549px; width: 105px;" Text="Password*"></asp:Label>
         <asp:TextBox ID="txtpwd" runat="server" Style="z-index: 119; left: 630px; position: absolute;
